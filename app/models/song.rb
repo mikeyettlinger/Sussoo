@@ -1,3 +1,3 @@
 class Song < ApplicationRecord
-  has_and_belongs_to_many :shopping_carts
+  belongs_to :song_shopping_carts, optional: true
 end

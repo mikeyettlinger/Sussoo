@@ -1,4 +1,4 @@
 class SongShoppingCart < ApplicationRecord
   belongs_to :shopping_cart
-  has_many :songs
+  belongs_to :song
 end

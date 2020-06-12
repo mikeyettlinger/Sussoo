@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Song.destroy_all
+
+counter = 1
+
+10.times do
+  counter += 1
+  song = Song.create(
+    title: "Song#{counter}",
+    price: 2,
+    length: 1.5,
+    description: "lit")
+  song.save!
+end
