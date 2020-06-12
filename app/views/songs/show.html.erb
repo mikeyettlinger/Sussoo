@@ -1,0 +1,5 @@
+<%= @song.title %>
+<%= @song.price %>
+<%= @song.length %>
+<%= @song.description %>
+<%= link_to 'Add to Cart', song_shopping_cart_path(song_id: @song) %>

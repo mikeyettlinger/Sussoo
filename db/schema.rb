@@ -25,10 +25,8 @@ ActiveRecord::Schema.define(version: 2020_06_12_111316) do
   end
 
   create_table "shopping_carts", force: :cascade do |t|
-    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_shopping_carts_on_user_id"
   end
 
   create_table "song_shopping_carts", force: :cascade do |t|
@@ -63,7 +61,6 @@ ActiveRecord::Schema.define(version: 2020_06_12_111316) do
 
   add_foreign_key "orders", "song_shopping_carts"
   add_foreign_key "orders", "users"
-  add_foreign_key "shopping_carts", "users"
   add_foreign_key "song_shopping_carts", "shopping_carts"
   add_foreign_key "song_shopping_carts", "songs"
 end

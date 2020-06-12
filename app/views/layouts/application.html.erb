@@ -11,6 +11,31 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
+  <div class="nav-container">
+    <nav>
+      <input type="checkbox" id="nav" class="hidden">
+      <label for="nav" class="nav-btn">
+        <i></i>
+        <i></i>
+        <i></i>
+      </label>
+      <div class="logo">
+            <a href="/">SUSSOO</a>
+      </div>
+      <div class="nav-wrapper">
+        <ul>
+          <% if user_signed_in?  %>
+              <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+            <% else %>
+            <li><%= link_to "Log in", new_user_session_path %></li>
+            <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <% end %>
+
+        </ul>
+      </div>
+    </nav>
+  </div>
+
   <body>
     <%= yield %>
   </body>
