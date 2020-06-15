@@ -1,4 +1,5 @@
 <h1> Susso </h1>
 <% @songs.each do |song| %>
-<%= @song.name %>
+<%= song.title %>
+<button id="<%=song.title%>" type="button">Click Me!</button>
 <% end %>
