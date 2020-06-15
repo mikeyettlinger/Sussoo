@@ -56,7 +56,10 @@ class SongShoppingCartsController < ApplicationController
   private
 
   def set_song_shopping_cart
-    @song_shopping_cart = SongShoppingCart.find(params[:id])
+    unless @song_shopping_cart.nil?
+      @song_shopping_cart = SongShoppingCart.find(params[:id])
+    end
+    @song_shopping_cart = SongShoppingCart.create(shopping_cart_id: session[:shopping_cart_id], song_id: params[:song_id])
   end
 
   def song_shopping_cart_params
