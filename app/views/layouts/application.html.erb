@@ -4,14 +4,42 @@
     <title>Sussoo</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
   </head>
 
   <body>
+    <nav>
+      <input type="checkbox" id="nav" class="hidden">
+      <label for="nav" class="nav-btn">
+        <i></i>
+        <i></i>
+        <i></i>
+      </label>
+      <div class="logo">
+        <%= image_tag "sussoo_icon_blue.png", class: 'sussoo-logo-navbar' %>
+        <a href="/">Sussoo</a>
+      </div>
+      <div class="nav-wrapper">
+        <ul>
+          <% if user_signed_in?  %>
+          <i class="fas fa-shopping-cart"></i>
+          <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+            <% else %>
+            <li><%= link_to "Log in", new_user_session_path %></li>
+            <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+
+
     <%= yield %>
   </body>
 </html>

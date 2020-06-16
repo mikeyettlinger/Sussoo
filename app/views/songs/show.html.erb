@@ -1,3 +1,4 @@
-<%= @song.name %>
+<%= @song.title %>
 <%= @song.description %>
 
+<%= button_to 'Add to cart', line_items_path(song_id: @song.id), method: :post %>
