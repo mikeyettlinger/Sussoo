@@ -5,7 +5,7 @@ class Cart < ApplicationRecord
   def add_song(song)
     current_item = line_items.find_by(song_id: song.id)
     if current_item
-      flash[:notice] = "item already in basket"
+      flash[:notice] = "item already in cart"
     else
       current_item = line_items.build(song_id: song.id)
     end
