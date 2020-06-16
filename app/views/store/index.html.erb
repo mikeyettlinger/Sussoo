@@ -43,10 +43,10 @@
                role="tabpanel"
                aria-labelledby="specification"
                aria-hidden="true">
-               <h1> Susso </h1>
+               <div class="grid-container">
                  <% @songs.each do |song| %>
-                 <%= song.title %>
-                 <button id="<%=song.title%>" type="button">Click Me!</button>
+                 <div class="grid-item"> <%= song.title %>
+                 <button id="<%=song.title%>" type="button">Play!</button>
                <% end %>
           </div>
         </li>
