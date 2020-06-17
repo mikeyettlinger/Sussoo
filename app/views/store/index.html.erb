@@ -32,7 +32,11 @@
                role="tabpanel"
                aria-labelledby="specification"
                aria-hidden="true">
-            <p>"Sell music here"</p>
+               <div class="grid-container">
+                 <% @songs.each do |song| %>
+                 <div class="grid-item"> <%= song.title %>
+                 <button id="<%=song.title%>" type="button">Play!</button>
+               <% end %>
           </div>
         </li>
         <li>
