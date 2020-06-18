@@ -1,5 +1,30 @@
 <p id="notice"><%= notice %></p>
 
+<div class="edit-cart">
+  <p style="font-family: 'Press Start 2P', cursive;"><%= link_to 'Edit', edit_cart_path(@cart) %> |
+  <%= link_to 'Back', carts_path %> </p>
+</div>
 
-<%= link_to 'Edit', edit_cart_path(@cart) %> |
-<%= link_to 'Back', carts_path %>
+<% counter = 0 %>
+<% @cart.line_items.each do |item| %>
+  <% counter += 1 %>
+<% end %>
+
+<% if counter == 0 %>
+  <div id="cart-title" class="cart-title">
+    <h2> Your Cart is Empty </h2>
+  </div>
+  <div class="browse-items">
+    <p>Click here to browse items</p>
+  </div>
+<% else %>
+  <div id="cart-title" class="cart-title">
+    <h2>Your Cart (<%= counter %>)</h2>
+  </div>
+<% end %>
+
+  <% @cart.line_items.each do |item| %>
+    <div class="cart-container"></div>
+      <%= item.song_id.title %>
+    </div>
+  <% end %>
