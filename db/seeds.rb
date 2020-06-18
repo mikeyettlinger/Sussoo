@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Song.destroy_all
+Merch.destroy_all
 
 counter = 1
 
@@ -17,4 +18,13 @@ counter = 1
     length: 1.5,
     description: "lit")
   song.save!
+end
+
+10.times do
+  counter += 1
+  merch = Merch.create(
+    title: "merch#{counter}",
+    price: 2,
+    description: "lit")
+  merch.save!
 end

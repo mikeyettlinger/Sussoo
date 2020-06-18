@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Merch Line Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Merch</th>
+      <th>Cart</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @merch_line_items.each do |merch_line_item| %>
+      <tr>
+        <td><%= merch_line_item.merch_id %></td>
+        <td><%= merch_line_item.cart_id %></td>
+        <td><%= link_to 'Show', merch_line_item %></td>
+        <td><%= link_to 'Edit', edit_merch_line_item_path(merch_line_item) %></td>
+        <td><%= link_to 'Destroy', merch_line_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Merch Line Item', new_merch_line_item_path %>

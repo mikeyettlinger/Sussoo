@@ -25,7 +25,6 @@ require("channels")
 // ----------------------------------------------------
 
 // External imports
-import { TransparentBanner } from '../plugins/banner';
 
 
 
@@ -33,7 +32,6 @@ import { TransparentBanner } from '../plugins/banner';
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
-  TransparentBanner;
   // Call your functions here, e.g:
   // initSelect2();
 });
