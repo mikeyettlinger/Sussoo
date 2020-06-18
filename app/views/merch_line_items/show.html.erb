@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Merch:</strong>
+  <%= @merch_line_item.merch_id %>
+</p>
+
+<p>
+  <strong>Cart:</strong>
+  <%= @merch_line_item.cart_id %>
+</p>
+
+<%= link_to 'Edit', edit_merch_line_item_path(@merch_line_item) %> |
+<%= link_to 'Back', merch_line_items_path %>

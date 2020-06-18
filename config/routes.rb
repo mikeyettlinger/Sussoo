@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :merch_line_items
+  resources :merches
   root to: 'store#index'
 
   resources :line_items

@@ -2,6 +2,10 @@
 $background: #9b59b6;
 $tabs-base-color: #8e44ad;
 
+@import url(//db.onlinewebfonts.com/c/4145587a822071d1d66f5201f5233f42?family=Merchant+Copy);
+
+@font-face {font-family: "Merchant Copy"; src: url("//db.onlinewebfonts.com/t/4145587a822071d1d66f5201f5233f42.eot"); src: url("//db.onlinewebfonts.com/t/4145587a822071d1d66f5201f5233f42.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/4145587a822071d1d66f5201f5233f42.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/4145587a822071d1d66f5201f5233f42.woff") format("woff"), url("//db.onlinewebfonts.com/t/4145587a822071d1d66f5201f5233f42.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/4145587a822071d1d66f5201f5233f42.svg#Merchant Copy") format("svg"); }
+
 body {
     background-image: url('background-sussoo.gif');
     background-size: cover;
@@ -10,16 +14,8 @@ body {
     margin:0;
 }
 
-// .background-container {
-//     background-image: url('bigger_tv.gif');
-//     height: 680px;
-//     width: 1000px;
-//     background-repeat: no-repeat;
-//     margin: 0 auto;
-// }
-
 .tabs-container {
-  width: 700px;
+  width: 800px;
   margin: 0 auto;
   margin-top: 50px !important;
 }
@@ -30,15 +26,17 @@ body {
 }
 
 .welcome-text-container p {
+  // font-family: 'Merchant Copy', truetype;
   font-family: 'Press Start 2P', cursive;
-  font-size: 24px;
+  color: white;
+  font-size: 28px;
   width: fit-content;
   margin: auto;
   padding-top: 30px;
 }
 
 .tabs {
-  width: 650px;
+  width: 800px;
   float: none;
   list-style: none;
   position: relative;
@@ -86,9 +84,10 @@ body {
   }
 
   .tab-content p {
-    font-family: 'Roboto Mono', monospace;
+    // font-family: 'Roboto Mono', monospace;
+    font-family: 'Merchant Copy', truetype;
     font-size: 14px;
-    font-color: white !important;
+    color: white !important;
   }
 
   .grid-container {
