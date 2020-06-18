@@ -4,6 +4,7 @@
 }
 
 .cart-title {
+  text-align: center;
   h2 {
     color: white !important;
     font-family: 'Press Start 2P', cursive;
@@ -11,8 +12,11 @@
 }
 
 .browse-items {
+  margin-top: 30px;
+  text-align: center;
   p {
-    color: white;
+    a { color: white;
+    }
     font-family: 'Press Start 2P', cursive;
   }
 }
