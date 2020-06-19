@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   resources :merches
   root to: 'store#index'
 
+  # get '/pages/sky', to: 'pages#sky'
+
+
+
   resources :line_items
   resources :carts
   resources :songs

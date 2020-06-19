@@ -25,6 +25,10 @@ require("channels")
 // ----------------------------------------------------
 
 // External imports
+import 'slick-carousel';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { initSlick } from '../plugins/init_slick';
 
 
 
@@ -32,106 +36,107 @@ require("channels")
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
+  initSlick();
   // Call your functions here, e.g:
   // initSelect2();
 });
 
-const button = document.querySelector('#Song2');
-const audio = new Audio('sound.mp3');
+// const button = document.querySelector('#Song2');
+// const audio = new Audio('sound.mp3');
 
-button.addEventListener('click', (e) => {
-  e.target.classList.add('disabled');
-  e.target.innerText = 'Playing';
-  // audio.play();
-  setTimeout(function(){ e.target.innerText = 'Listen again?'; }, 3000);
-});
+// button.addEventListener('click', (e) => {
+//   e.target.classList.add('disabled');
+//   e.target.innerText = 'Playing';
+//   // audio.play();
+//   setTimeout(function(){ e.target.innerText = 'Listen again?'; }, 3000);
+// });
 
-const button3 = document.querySelector('#Song3');
-const audio3 = new Audio('sound.mp3');
+// const button3 = document.querySelector('#Song3');
+// const audio3 = new Audio('sound.mp3');
 
-button3.addEventListener('click', (e) => {
-  e.target.classList.add('disabled');
-  e.target.innerText = 'Playing';
-  // audio.play();
-  setTimeout(function(){ e.target.innerText = 'Listen again?'; }, 3000);
-});
+// button3.addEventListener('click', (e) => {
+//   e.target.classList.add('disabled');
+//   e.target.innerText = 'Playing';
+//   // audio.play();
+//   setTimeout(function(){ e.target.innerText = 'Listen again?'; }, 3000);
+// });
 
-const button4 = document.querySelector('#Song4');
-const audio4 = new Audio('sound.mp3');
+// const button4 = document.querySelector('#Song4');
+// const audio4 = new Audio('sound.mp3');
 
-button4.addEventListener('click', (e) => {
-  e.target.classList.add('disabled');
-  e.target.innerText = 'Playing';
-  // audio.play();
-  setTimeout(function(){ e.target.innerText = 'Listen again?'; }, 3000);
-});
+// button4.addEventListener('click', (e) => {
+//   e.target.classList.add('disabled');
+//   e.target.innerText = 'Playing';
+//   // audio.play();
+//   setTimeout(function(){ e.target.innerText = 'Listen again?'; }, 3000);
+// });
 
-const button5 = document.querySelector('#Song5');
-const audio5 = new Audio('sound.mp3');
+// const button5 = document.querySelector('#Song5');
+// const audio5 = new Audio('sound.mp3');
 
-button5.addEventListener('click', (e) => {
-  e.target.classList.add('disabled');
-  e.target.innerText = 'Playing';
-  // audio.play();
-  setTimeout(function(){ e.target.innerText = 'Listen again?'; }, 3000);
-});
+// button5.addEventListener('click', (e) => {
+//   e.target.classList.add('disabled');
+//   e.target.innerText = 'Playing';
+//   // audio.play();
+//   setTimeout(function(){ e.target.innerText = 'Listen again?'; }, 3000);
+// });
 
-const button6 = document.querySelector('#Song6');
-const audio6 = new Audio('sound.mp3');
+// const button6 = document.querySelector('#Song6');
+// const audio6 = new Audio('sound.mp3');
 
-button6.addEventListener('click', (e) => {
-  e.target.classList.add('disabled');
-  e.target.innerText = 'Playing';
-  // audio.play();
-  setTimeout(function(){ e.target.innerText = 'Listen again?'; }, 3000);
-});
+// button6.addEventListener('click', (e) => {
+//   e.target.classList.add('disabled');
+//   e.target.innerText = 'Playing';
+//   // audio.play();
+//   setTimeout(function(){ e.target.innerText = 'Listen again?'; }, 3000);
+// });
 
-const button7 = document.querySelector('#Song7');
-const audio7 = new Audio('sound.mp3');
+// const button7 = document.querySelector('#Song7');
+// const audio7 = new Audio('sound.mp3');
 
-button7.addEventListener('click', (e) => {
-  e.target.classList.add('disabled');
-  e.target.innerText = 'Playing';
-  // audio.play();
-  setTimeout(function(){ e.target.innerText = 'Listen again?'; }, 3000);
-});
+// button7.addEventListener('click', (e) => {
+//   e.target.classList.add('disabled');
+//   e.target.innerText = 'Playing';
+//   // audio.play();
+//   setTimeout(function(){ e.target.innerText = 'Listen again?'; }, 3000);
+// });
 
-const button8 = document.querySelector('#Song8');
-const audio8 = new Audio('sound.mp3');
+// const button8 = document.querySelector('#Song8');
+// const audio8 = new Audio('sound.mp3');
 
-button8.addEventListener('click', (e) => {
-  e.target.classList.add('disabled');
-  e.target.innerText = 'Playing';
-  // audio.play();
-  setTimeout(function(){ e.target.innerText = 'Listen again?'; }, 3000);
-});
+// button8.addEventListener('click', (e) => {
+//   e.target.classList.add('disabled');
+//   e.target.innerText = 'Playing';
+//   // audio.play();
+//   setTimeout(function(){ e.target.innerText = 'Listen again?'; }, 3000);
+// });
 
-const button9 = document.querySelector('#Song9');
-const audio9 = new Audio('sound.mp3');
+// const button9 = document.querySelector('#Song9');
+// const audio9 = new Audio('sound.mp3');
 
-button9.addEventListener('click', (e) => {
-  e.target.classList.add('disabled');
-  e.target.innerText = 'Playing';
-  // audio.play();
-  setTimeout(function(){ e.target.innerText = 'Listen again?'; }, 3000);
-});
+// button9.addEventListener('click', (e) => {
+//   e.target.classList.add('disabled');
+//   e.target.innerText = 'Playing';
+//   // audio.play();
+//   setTimeout(function(){ e.target.innerText = 'Listen again?'; }, 3000);
+// });
 
-const button10 = document.querySelector('#Song10');
-const audio10 = new Audio('sound.mp3');
+// const button10 = document.querySelector('#Song10');
+// const audio10 = new Audio('sound.mp3');
 
-button10.addEventListener('click', (e) => {
-  e.target.classList.add('disabled');
-  e.target.innerText = 'Playing';
-  // audio.play();
-  setTimeout(function(){ e.target.innerText = 'Listen again?'; }, 3000);
-});
+// button10.addEventListener('click', (e) => {
+//   e.target.classList.add('disabled');
+//   e.target.innerText = 'Playing';
+//   // audio.play();
+//   setTimeout(function(){ e.target.innerText = 'Listen again?'; }, 3000);
+// });
 
-const button11 = document.querySelector('#Song11');
-const audio11 = new Audio('sound.mp3');
+// const button11 = document.querySelector('#Song11');
+// const audio11 = new Audio('sound.mp3');
 
-button11.addEventListener('click', (e) => {
-  e.target.classList.add('disabled');
-  e.target.innerText = 'Playing';
-  // audio.play();
-  setTimeout(function(){ e.target.innerText = 'Listen again?'; }, 3000);
-});
+// button11.addEventListener('click', (e) => {
+//   e.target.classList.add('disabled');
+//   e.target.innerText = 'Playing';
+//   // audio.play();
+//   setTimeout(function(){ e.target.innerText = 'Listen again?'; }, 3000);
+// });

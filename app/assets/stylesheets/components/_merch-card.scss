@@ -1,3 +1,34 @@
-.merch-card-flexbox {
+
+.merch-card {
+  border: dashed #AB9550;
+  height: 245px;
+  width: 400px;
+  background-color: transparent;
+  margin: auto;
+  position: fixed;
+  left: 640px;
+  top: 215px;
+}
+
+.merch-item-card {
   display: flex;
+  flex-direction: column;
+  justify: space-around;
+  align-content: center;
+}
+
+.merch-card-image {
+  width: 200px;
+  height: 150px;
+  border: dashed #AB9550;
+  border-width: 2px;
+  margin-bottom: 40px;
+  margin: auto;
+}
+
+.merch-card-title p {
+  font-family: 'Merchant Copy', truetype !important;
+  color: white !important;
+  font-size: 22px !important;
+  text-align: center;
 }

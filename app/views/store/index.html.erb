@@ -1,63 +1,53 @@
-<div class="banner">
-  <div class="social-container">
-    <div class="banner-social-links">
-      <a href="https://www.instagram.com/sussoobeats/"><i class="social-icon fab fa-instagram fa-2x"></i></a>
-      <a href="https://www.facebook.com/oosussoo/"><i class="social-icon fab fa-facebook fa-2x"></i></a>
-      <a href="#"><i class="social-icon fab fa-youtube fa-2x"></i></a>
-      <a href="#"><i class="social-icon fab fa-discord fa-2x"></i></i></a>
-      <a href="#"><i class="social-icon fab fa-spotify fa-2x"></i></i></a>
-      <a href="#"><i class="social-icon fab fa-soundcloud fa-2x"></i></i></a>
+<%= video_tag "sussoo_video_background.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
+
+
+  <div class="background-container">
+      <div class="merch-card">
+        <div class="merch-card-image">
+        </div>
+        <div class="merch-card-title">
+          <p>Logo Hoodie $39</p>
+          <div class="add-to-basket-button">
+            <p>Add to Basket</p>
+          </div>
+        </div>
+      </div>
+
+    <div class="arrows-container">
+      <p> < </p>
+      <p> > </p>
     </div>
   </div>
+
+<div class="left-menu-container">
+  <li><%= link_to "CART", "/" %></li>
+  <li><%= link_to "ARCADE", "/" %></li>
+  <li><%= link_to "CONTACT", "/" %></li>
 </div>
 
-<div class="welcome-text-container">
-  <p>SUSSOO BEATS</p>
-</div>
-
-<div class="background-container">
-  <div class="tabs-container">
-    <ul class="tabs" role="tablist">
-      <li>
-        <input type="radio" name="tabs" id="tab1" checked />
-        <label for="tab1" role="tab" aria-selected="true" aria-controls="panel1" tabindex="0"><%= image_tag "sussoo_icon_blue.png", class: 'sussoo-logo-icon'%>Sussoo</label>
-        <div id="tab-content1" class="tab-content" role="tabpanel" aria-labelledby="description" aria-hidden="false">
-          <p>"Yo"</p>
-        </div>
-      </li>
-      <li>
-        <input type="radio" name="tabs" id="tab2" />
-        <label for="tab2" role="tab" aria-selected="false" aria-controls="panel2" tabindex="0"> 🔥 Beats</label>
-        <div id="tab-content2" class="tab-content" role="tabpanel" aria-labelledby="specification" aria-hidden="true">
-          <div class="grid-container">
-            <% @songs.each do |song| %>
-              <div class="grid-item">
-                <%= song.title %>
-                <button id="<%=song.title%>" type="button">Play!</button>
-            <% end %>
-              </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <input type="radio" name="tabs" id="tab3" />
-        <label for="tab3" role="tab" aria-selected="false" aria-controls="panel3" tabindex="1"> 💎 Merch</label>
-        <div id="tab-content3s" class="tab-content" role="tabpanel" aria-labelledby="specification" aria-hidden="true">
-
-
-          <div class="merch-card-flexbox">
-
-          </div>
-
-          <% @merches.each do |merch| %>
-          <p><%= merch.title %></p>
-          <% end %>
-
-        </div>
-      </li>
-    </ul>
+<div class="bottom-right-container">
+  <%= image_tag "sussoo_icon_blue.png", class: 'sussoo-logo-icon', id: 'bottom-right-logo'%>
+  <div class="logo-container">
+    <div class="container">
+    <div class="glitch" data-text="SussoO">SussoO</div>
+    <div class="glow">SussoO</div>
+    </div>
+    <div class="scanlines"></div>
+  </div>
+  <div class="banner-social-links">
+    <a href="https://www.instagram.com/sussoobeats/"><i class="social-icon fab fa-instagram fa-2x"></i></a>
+    <a href="https://www.facebook.com/oosussoo/"><i class="social-icon fab fa-facebook fa-2x"></i></a>
+    <a href="#"><i class="social-icon fab fa-youtube fa-2x"></i></a>
+    <a href="#"><i class="social-icon fab fa-discord fa-2x"></i></i></a>
+    <a href="#"><i class="social-icon fab fa-spotify fa-2x"></i></i></a>
+    <a href="#"><i class="social-icon fab fa-soundcloud fa-2x"></i></i></a>
   </div>
 </div>
+
+
+
+
+
 
 
 
