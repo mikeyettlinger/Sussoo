@@ -1,21 +1,12 @@
-<div class="banner">
-  <div class="social-container">
-    <div class="banner-social-links">
-      <a href="https://www.instagram.com/sussoobeats/"><i class="social-icon fab fa-instagram fa-2x"></i></a>
-      <a href="https://www.facebook.com/oosussoo/"><i class="social-icon fab fa-facebook fa-2x"></i></a>
-      <a href="#"><i class="social-icon fab fa-youtube fa-2x"></i></a>
-      <a href="#"><i class="social-icon fab fa-discord fa-2x"></i></i></a>
-      <a href="#"><i class="social-icon fab fa-spotify fa-2x"></i></i></a>
-      <a href="#"><i class="social-icon fab fa-soundcloud fa-2x"></i></i></a>
-    </div>
-  </div>
+<div class="banner-social-links">
+  <a href="https://www.instagram.com/sussoobeats/"><i class="social-icon fab fa-instagram fa-2x"></i></a>
+  <a href="https://www.facebook.com/oosussoo/"><i class="social-icon fab fa-facebook fa-2x"></i></a>
+  <a href="#"><i class="social-icon fab fa-youtube fa-2x"></i></a>
+  <a href="#"><i class="social-icon fab fa-discord fa-2x"></i></i></a>
+  <a href="#"><i class="social-icon fab fa-spotify fa-2x"></i></i></a>
+  <a href="#"><i class="social-icon fab fa-soundcloud fa-2x"></i></i></a>
 </div>
 
-<div class="welcome-text-container">
-  <p>SUSSOO BEATS</p>
-</div>
-
-<div class="background-container">
   <div class="tabs-container">
     <ul class="tabs" role="tablist">
       <li>
@@ -42,22 +33,31 @@
       <li>
         <input type="radio" name="tabs" id="tab3" />
         <label for="tab3" role="tab" aria-selected="false" aria-controls="panel3" tabindex="1"> 💎 Merch</label>
-        <div id="tab-content3s" class="tab-content" role="tabpanel" aria-labelledby="specification" aria-hidden="true">
-
-
-          <div class="merch-card-flexbox">
-
+        <div id="tab-content" class="tab-content" role="tabpanel" aria-labelledby="specification" aria-hidden="true">
+          <div class="merch-card">
+            <div class="single-merch-item">
+              <div class="merch-item-card">
+                <div class="merch-card-image"></div>
+                <div class="merch-card-title">
+                  <p>$59</p>
+                  <p>Black Logo Hoodie</p>
+                  <div class="add-to-basket-button">
+                    <p>Add to Basket</p>
+                  </div>
+                </div>
+              </div>
+              <div> slide 3</div>
+              <div>slide 3</div>
+            </div>
           </div>
-
-          <% @merches.each do |merch| %>
-          <p><%= merch.title %></p>
-          <% end %>
-
         </div>
       </li>
     </ul>
   </div>
-</div>
+
+  <div class="logo-container">
+    <%= image_tag "sussoo_logo.png" %>
+  </div>
 
 
 
