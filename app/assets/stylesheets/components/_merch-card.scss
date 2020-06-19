@@ -1,10 +1,13 @@
 
 .merch-card {
-  border: solid;
-  height: 450px;
+  border: dashed #AB9550;
+  height: 245px;
   width: 400px;
-  background-color: #8F45AD;
+  background-color: transparent;
   margin: auto;
+  position: fixed;
+  left: 640px;
+  top: 215px;
 }
 
 .merch-item-card {
@@ -15,11 +18,12 @@
 }
 
 .merch-card-image {
-width: 200px;
-height: 200px;
-border: solid;
-border-width: 2px;
-margin-bottom: 40px;
+  width: 200px;
+  height: 150px;
+  border: dashed #AB9550;
+  border-width: 2px;
+  margin-bottom: 40px;
+  margin: auto;
 }
 
 .merch-card-title p {
