@@ -1,6 +1,10 @@
 const initSlick = () => {
-  $('.single-merch-item').slick({
+  console.log('hi')
+  $('.single-item').slick({
     arrows: true,
+    dots: true
+    // nextArrow: '<i class="slick-next slick-arrow arrow-right"> > </i>',
+    // prevArrow: '<i class="slick-next slick-arrow arrow-left"> < </i>'
   });
 };
 

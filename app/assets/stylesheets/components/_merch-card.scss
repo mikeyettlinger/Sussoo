@@ -5,9 +5,9 @@
   width: 400px;
   background-color: transparent;
   margin: auto;
-  position: fixed;
-  left: 640px;
-  top: 215px;
+  // position: fixed;
+  // left: 640px;
+  // top: 215px;
 }
 
 .merch-item-card {
@@ -26,7 +26,7 @@
   margin: auto;
 }
 
-.merch-card-title p {
+.merch-card-title h3 {
   font-family: 'Merchant Copy', truetype !important;
   color: white !important;
   font-size: 22px !important;

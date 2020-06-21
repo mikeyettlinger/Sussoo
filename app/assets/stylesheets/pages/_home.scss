@@ -33,6 +33,11 @@ body {
   margin-bottom: 50px;
 }
 
+.icons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .left-menu-container {
   position: fixed;
   bottom: 0;
@@ -70,15 +75,33 @@ body {
   margin-top: 50px;
 }
 
-.arrows-container {
-  display: flex;
-  justify-content: space-around;
+.arrow-right {
+  // display: flex;
+  // justify-content: space-around;
   font-family: 'Merchant Copy', truetype;
   font-size: 60px;
   color: white;
-  width: 100%;
+  // width: 100%;
 }
 
-.arrows-container p  {
- margin-top: 170px;
+.arrow-left {
+   font-family: 'Merchant Copy', truetype;
+  font-size: 60px;
+  color: white;
+}
+
+// .arrows-container p  {
+//  margin-top: 170px;
+// }
+
+.holder {
+  margin-top: 100px;
+}
+
+.store-container {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 28px;
+  color: #AA9550;
+  margin-top: 200px;
+  margin-left: 325px;
 }

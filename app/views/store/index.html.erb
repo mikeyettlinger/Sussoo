@@ -2,22 +2,50 @@
 
 
   <div class="background-container">
-      <div class="merch-card">
-        <div class="merch-card-image">
-        </div>
-        <div class="merch-card-title">
-          <p>Logo Hoodie $39</p>
-          <div class="add-to-basket-button">
-            <p>Add to Basket</p>
+    <div class="single-item">
+      <div class="holder">
+        <div class="merch-card">
+          <div class="merch-card-image">
+          </div>
+          <div class="merch-card-title">
+            <h3>Logo Hoodie $39</h3>
+            <div class="add-to-basket-button">
+              <p>Add to Basket</p>
+            </div>
           </div>
         </div>
       </div>
-
-    <div class="arrows-container">
-      <p> < </p>
-      <p> > </p>
+      <div class="holder">
+        <div class="merch-card">
+          <div class="merch-card-image">
+          </div>
+          <div class="merch-card-title">
+            <h3>Logo Beanie $19</h3>
+            <div class="add-to-basket-button">
+              <p>Add to Basket</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="holder">
+        <div class="merch-card">
+          <div class="merch-card-image">
+          </div>
+          <div class="merch-card-title">
+            <h3>Logo Trackies $49</h3>
+            <div class="add-to-basket-button">
+              <p>Add to Basket</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="store-container">
+      <p>STORE</p>
     </div>
   </div>
+
+
 
 <div class="left-menu-container">
   <li><%= link_to "CART", "/" %></li>
@@ -26,7 +54,10 @@
 </div>
 
 <div class="bottom-right-container">
-  <%= image_tag "sussoo_icon_blue.png", class: 'sussoo-logo-icon', id: 'bottom-right-logo'%>
+  <div class="icons-container">
+    <%= image_tag "sussoo_icon_blue.png", class: 'sussoo-logo-icon', id: 'bottom-right-logo'%>
+    <%= image_tag "sussoo_icon_pink.png", class: 'sussoo-logo-icon', id: 'bottom-right-logo'%>
+  </div>
   <div class="logo-container">
     <div class="container">
     <div class="glitch" data-text="SussoO">SussoO</div>
