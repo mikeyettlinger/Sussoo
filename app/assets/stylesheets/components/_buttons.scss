@@ -1,0 +1,30 @@
+.add-to-basket-button p {
+  font-family: 'Merchant Copy', truetype;
+  color: #817949;
+  text-align: center;
+  font-size: 18px;
+}
+
+.add-to-basket-button {
+  border: solid;
+  border-radius: 2px;
+  border-color: #817949;
+  width: 180px;
+  height: 30px;
+  border-width: 2px;
+  align-content: center;
+  margin: auto;
+}
+
+.add-to-basket-button:hover {
+  background-color: #817949;
+  background-opacity: 40%;
+  border-color: #817949;
+  transition: background .1s linear;
+}
+
+.add-to-basket-button:hover p {
+  color: white !important;
+}
+
+

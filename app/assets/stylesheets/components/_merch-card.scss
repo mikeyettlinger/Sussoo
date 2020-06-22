@@ -1,3 +1,41 @@
-.merch-card-flexbox {
-  display: flex;
+
+.merch-card {
+  // border: dashed #F1FF4E;
+  height: 245px;
+  width: 400px;
+  background-color: transparent;
+  margin: auto;
+  // position: fixed;
+  // left: 640px;
+  // top: 215px;
 }
+
+.merch-item-card {
+  display: flex;
+  flex-direction: column;
+  justify: space-around;
+  align-content: center;
+}
+
+.merch-card-image {
+  width: 200px;
+  height: 150px;
+  border: dashed #F1FF4E;
+  border-width: 2px;
+  margin-bottom: 40px;
+  margin: auto;
+}
+
+.merch-card-title h3 {
+  font-family: 'Merchant Copy', truetype !important;
+  color: white !important;
+  font-size: 22px !important;
+  text-align: center;
+}
+
+.hoodie-example {
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  justify-content: center;
+ }
