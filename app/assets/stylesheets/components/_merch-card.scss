@@ -1,6 +1,6 @@
 
 .merch-card {
-  border: dashed #AB9550;
+  // border: dashed #F1FF4E;
   height: 245px;
   width: 400px;
   background-color: transparent;
@@ -20,7 +20,7 @@
 .merch-card-image {
   width: 200px;
   height: 150px;
-  border: dashed #AB9550;
+  border: dashed #F1FF4E;
   border-width: 2px;
   margin-bottom: 40px;
   margin: auto;
@@ -32,3 +32,10 @@
   font-size: 22px !important;
   text-align: center;
 }
+
+.hoodie-example {
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  justify-content: center;
+ }

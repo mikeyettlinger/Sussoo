@@ -69,8 +69,8 @@ body {
 .background-container {
   background-image: url('computer_background.png');
   background-size: cover;
-  height: 700px;
-  width: 700px;
+  height: 750px;
+  width: 750px;
   margin: auto;
   margin-top: 50px;
 }
@@ -101,7 +101,16 @@ body {
 .store-container {
   font-family: 'Press Start 2P', cursive;
   font-size: 28px;
-  color: #AA9550;
+  color: #AA9550 !important;
   margin-top: 200px;
   margin-left: 325px;
+}
+
+.slick-prev {
+    left: 225px !important;
+    top: 225px !important;
+}
+.slick-next {
+    right: 225px !important;
+    top: 225px !important;
 }
