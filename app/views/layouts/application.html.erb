@@ -19,12 +19,20 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <%= favicon_link_tag asset_path('sussoo_icon_blue.png') %>
     <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width" />
-  <title>Glitch</title>
-  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-  </head>
-
+    <meta name="viewport" content="width=device-width" />
+    <title>Glitch</title>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
+    </head>
+    <!-- minify -->
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <!-- latest -->
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <!-- core style only -->
+    <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
   <body>
+  <%= video_tag "sussoo_video_background.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
+
     <!-- <nav>
       <input type="checkbox" id="nav" class="hidden">
       <label for="nav" class="nav-btn">

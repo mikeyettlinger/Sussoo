@@ -29,6 +29,8 @@ import 'slick-carousel';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { initSlick } from '../plugins/init_slick';
+import "nes.css/css/nes.min.css";
+
 
 
 

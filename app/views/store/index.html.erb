@@ -1,46 +1,20 @@
-<%= video_tag "sussoo_video_background.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
 
 
   <div class="background-container">
     <div class="single-item">
+      <% @merches.each do |merch| %>
       <div class="holder">
         <div class="merch-card">
           <div class="merch-card-image">
             <%= image_tag "hoodie_example.png", class: "hoodie-example" %>
           </div>
           <div class="merch-card-title">
-            <h3>Logo Hoodie $39</h3>
-            <div class="add-to-basket-button">
-              <p>Add to Basket</p>
-            </div>
+            <span class="nes-text is-disabled"><%= "#{merch.title}, $#{merch.price}" %></span>
+            <%= button_to 'Add to cart', merch_line_items_path(merch_id: merch.id), method: :post, class:"nes-btn is-warning"%>
           </div>
         </div>
       </div>
-      <div class="holder">
-        <div class="merch-card">
-          <div class="merch-card-image">
-          </div>
-          <div class="merch-card-title">
-            <h3>Logo Beanie $19</h3>
-            <div class="add-to-basket-button">
-              <p>Add to Basket</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="holder">
-        <div class="merch-card">
-          <div class="merch-card-image">
-          </div>
-          <div class="merch-card-title">
-            <h3>Logo Trackies $49</h3>
-            <div class="add-to-basket-button">
-              <p>Add to Basket</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      <% end %>
     <div class="store-container">
       <p>STORE</p>
     </div>
