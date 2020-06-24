@@ -24,3 +24,15 @@
 .payment-button {
   margin-top: 18px;
 }
+
+.cart-payment-info {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.amount {
+  color: white;
+  font-family: 'Merchant Copy', truetype;
+  font-size: 25px;
+}

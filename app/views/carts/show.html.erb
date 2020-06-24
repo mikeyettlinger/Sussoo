@@ -31,7 +31,7 @@
     </div>
   <% end %>
 
-  <% price_counter = 0 %>
+  <% price_counter = 12 %>
   <% @cart.line_items.each do |item| %>
     <%= counter += item.song.price %>
   <% end %>
@@ -40,22 +40,23 @@
     <%= counter += item.merch.price %>
   <% end %>
 
+<div class="cart-payment-info">
+  <%= form_tag charges_path, class: "payment-button" do %>
+    <article>
+      <% if flash[:error].present? %>
+        <div id="error_explanation">
+          <p><%= flash[:error] %></p>
+        </div>
+      <% end %>
+      <label class="amount">
+        <span>Amount: <%= price_counter %> </span>
+      </label>
+    </article>
 
-<%= form_tag charges_path, class: "payment-button" do %>
-  <article>
-    <% if flash[:error].present? %>
-      <div id="error_explanation">
-        <p><%= flash[:error] %></p>
-      </div>
-    <% end %>
-    <label class="amount">
-      <span>Amount: £ <%= price_counter%> </span>
-    </label>
-  </article>
-
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="Please enter your details below"
-          data-label="Proceed to checkout"
-          data-locale="auto"></script>
-<% end %>
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-description="Please enter your details below"
+            data-label="Proceed to checkout"
+            data-locale="auto"></script>
+  <% end %>
+</div>
