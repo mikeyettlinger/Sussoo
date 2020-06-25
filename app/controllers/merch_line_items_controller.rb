@@ -59,7 +59,7 @@ class MerchLineItemsController < ApplicationController
   def destroy
     @cart = Cart.find(session[:cart_id])
     if @merch_line_item.quantity > 1
-      @merch_line_item.quantity - 1
+      @merch_line_item.quantity = @merch_line_item.quantity - 1
     else
       @merch_line_item.destroy
     end
