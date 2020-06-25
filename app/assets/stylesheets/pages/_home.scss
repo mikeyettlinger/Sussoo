@@ -9,21 +9,62 @@ $tabs-base-color: #8e44ad;
 body {
     // background-image: url('background-sussoo.gif');
     // background-size: cover;
-    max-height: 100vh;
-    padding: 0;
+    // max-height: 100vh;
+    // padding: 0;
+    // margin: 0;
+    width:100vw;
+    height: 100vh;
     margin: 0;
+    overflow: hidden;
+    background-color: black !important;
 }
 
+// @media (min-aspect-ratio: 16/9) {
+//     .home_video {
+//         width:100%;
+//         height: auto;
+//     }
+// }
+// @media (max-aspect-ratio: 16/9) {
+//     #videoBG {
+//         width:auto;
+//         height: 100%;
+//     }
+// }
+// @media (max-width: 767px) {
+//     #videoBG {
+//         display: none;
+//     }
+//   }
+
+// .wrapper-page {
+//     margin-top: 100vh;
+// }
+
 .home_video {
-   width: 100%;
-   height: 100%;
-   position: absolute;
-   display: flex;
-   justify-content: center;
-   // object-fit: cover;
-   top: 0;
-   z-index: -2;
+  z-index: -5;
+  // object-fit: cover;
+  // width: 100vw;
+  // height: 100vh;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
+
+  .video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 
 .bottom-right-container {
   position: fixed;
@@ -55,9 +96,14 @@ body {
   color: white;
 }
 
-#bottom-right-logo {
+#bottom-right-logo-blue {
   height: 100px;
   width: 100px;
+}
+
+#bottom-right-logo-pink {
+  height: 100px !important;
+  width: 75px !important;
 }
 
 .logo-container {
@@ -113,4 +159,11 @@ body {
 .slick-next {
     right: 225px !important;
     top: 225px !important;
+}
+
+.shopping-cart-icon-button {
+  color: white;
+  position: fixed;
+  top: 40px;
+  right: 40px;
 }

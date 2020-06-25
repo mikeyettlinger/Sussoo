@@ -25,6 +25,8 @@ end
   merch = Merch.create(
     title: "merch#{counter}",
     price: 2,
-    description: "lit")
+    description: "lit",
+    size: "Large",
+    quantity: 10)
   merch.save!
 end
