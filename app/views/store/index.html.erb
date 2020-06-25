@@ -1,78 +1,68 @@
-  <div class="background-container">
-    <div class="single-item">
-      <div class="holder">
-        <div class="merch-card">
-          <div class="merch-card-image">
-            <%= image_tag "hoodie_example.png", class: "hoodie-example" %>
-          </div>
-          <div class="merch-card-title">
-            <h3>Logo Hoodie $39</h3>
-            <div class="add-to-basket-button">
-              <p>Add to Basket</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="holder">
-        <div class="merch-card">
-          <div class="merch-card-image">
-          </div>
-          <div class="merch-card-title">
-            <h3>Logo Beanie $19</h3>
-            <div class="add-to-basket-button">
-              <p>Add to Basket</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="holder">
-        <div class="merch-card">
-          <div class="merch-card-image">
-          </div>
-          <div class="merch-card-title">
-            <h3>Logo Trackies $49</h3>
-            <div class="add-to-basket-button">
-              <p>Add to Basket</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="store-container">
-      <p>STORE</p>
-    </div>
-  </div>
+<!-- <div class="video-container">
+  <%= video_tag "sussoo_video_background.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
+</div> -->
 
+<div class="background-container">
+  <div class="single-item">
+    <% @merches.each do |merch| %>
+    <div class="holder">
+      <div class="merch-card">
+        <div class="merch-card-image">
+          <%= image_tag "sussoo_supreme.png", class: "hoodie-example" %>
+        </div>
+        <div class="merch-card-title">
+          <h3><%= "#{merch.title} $#{merch.price}" %></h3>
+          <div class="add-to-basket-button">
+            <%= link_to merch_line_items_path(merch_id: merch), method: :post do %>
+              <p>Add to Basket</p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <div class="store-container">
+    <p>STORE</p>
+  </div>
+</div>
+
+<div class="cart-icon-container">
+  <%= link_to carts_path(@cart) do %>
+  <i class="fa fa-shopping-cart fa-3x shopping-cart-icon-button"></i>
+  <% end %>
+</div>
 
 
 <div class="left-menu-container">
-  <li><%= link_to "CART", "/" %></li>
+  <li><%= link_to "MERCH", "/" %></li>
   <li><%= link_to "ARCADE", "/" %></li>
-  <li><%= link_to "CONTACT", "/" %></li>
-  <li><%= link_to "BEATS", "/" %></li>
-</div>
-
-<div class="bottom-right-container">
-  <div class="icons-container">
-    <%= image_tag "sussoo_icon_blue.png", class: 'sussoo-logo-icon', id: 'bottom-right-logo'%>
-    <%= image_tag "sussoo_icon_pink.png", class: 'sussoo-logo-icon', id: 'bottom-right-logo'%>
-  </div>
-  <div class="logo-container">
-    <div class="container">
-    <div class="glitch" data-text="SussoO">SussoO</div>
-    <div class="glow">SussoO</div>
-    </div>
-    <div class="scanlines"></div>
-  </div>
+  <li><%= link_to "CLUB", "/" %></li>
+  <li><%= link_to "BEATS", songs_path %></li>
   <div class="banner-social-links">
     <a href="https://www.instagram.com/sussoobeats/"><i class="social-icon fab fa-instagram fa-2x"></i></a>
     <a href="https://www.facebook.com/oosussoo/"><i class="social-icon fab fa-facebook fa-2x"></i></a>
     <a href="#"><i class="social-icon fab fa-youtube fa-2x"></i></a>
     <a href="#"><i class="social-icon fab fa-discord fa-2x"></i></i></a>
-    <a href="#"><i class="social-icon fab fa-spotify fa-2x"></i></i></a>
-    <a href="#"><i class="social-icon fab fa-soundcloud fa-2x"></i></i></a>
+    <a href="https://open.spotify.com/artist/2B9ZzzgW0gj69OqxAl4XYt?si=JOV2bBBiRAONHUJhA0oykg"><i class="social-icon fab fa-spotify fa-2x"></i></i></a>
+    <a href="https://soundcloud.com/sussoo-178309003"><i class="social-icon fab fa-soundcloud fa-2x"></i></i></a>
   </div>
 </div>
+
+<div class="bottom-right-container">
+  <div class="icons-container">
+    <%= image_tag "sussoo_icon_blue.png", id: 'bottom-right-logo-blue'%>
+    <%= image_tag "sussoo_icon_pink.png", id: 'bottom-right-logo-pink'%>
+  </div>
+  <div class="logo-container">
+    <div class="container">
+      <div class="glitch" data-text="SussoO">SussoO</div>
+      <div class="glow">SussoO</div>
+    </div>
+    <div class="scanlines"></div>
+  </div>
+</div>
+
 
 
 

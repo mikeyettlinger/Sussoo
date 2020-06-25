@@ -1,9 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<div class="edit-cart">
-  <p style="font-family: 'Press Start 2P', cursive;"><%= link_to 'Edit', edit_cart_path(@cart) %> |
-  <%= link_to 'Back', root_path %> </p>
-</div>
+
+
 
 <% counter = 0 %>
 <% @cart.line_items.each do |item| %>
@@ -21,21 +19,37 @@
   </div>
 <% else %>
   <div id="cart-title" class="cart-title">
+    <i class="nes-icon coin is-medium"></i>
     <h2>Your Cart (<%= counter %>)</h2>
+    <i class="nes-icon coin is-medium"></i>
   </div>
 <% end %>
 
-  <% @cart.line_items.each do |item| %>
-    <div class="cart-container"></div>
-      <%= item.song.title %>
+<div class="edit-cart">
+  <p style="font-family: 'Press Start 2P', cursive;"><%= link_to 'Edit', edit_cart_path(@cart) %> |
+  <%= link_to 'Back', root_path %> </p>
+</div>
+
+
+<div class="cart-items-container">
+  <div class="line-items-flexbox">
+ <% @cart.merch_line_items.each do |item| %>
+    <div class="line-item-container">
+      <div class="">
+        <ul><%= item.merch.title %></ul>
+      </div>
+      <div class="">
+        <ul><%= item.merch.size %></ul>
+      </div>
+      <div class="">
+        <ul><%= item.merch.price %></ul>
+      </div>
     </div>
   <% end %>
+  </div>
+</div>
 
   <% price_counter = 12 %>
-  <% @cart.line_items.each do |item| %>
-    <%= counter += item.song.price %>
-  <% end %>
-
   <% @cart.merch_line_items.each do |item| %>
     <%= counter += item.merch.price %>
   <% end %>
@@ -49,7 +63,11 @@
         </div>
       <% end %>
       <label class="amount">
-        <span>Amount: <%= price_counter %> </span>
+        <% total_price = 0 %>
+        <% @cart.merch_line_items.each do |item| %>
+        <% total_price += item.merch.price %>
+        <% end %>
+        <span> Total: $<%= total_price %> </span>
       </label>
     </article>
 

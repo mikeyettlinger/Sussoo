@@ -1,15 +1,33 @@
 .edit-cart {
+  z-index: +2;
+  margin: auto;
+  width: 250px;
+  margin-top: 20px;
+  color: #8E44AD;
   a { color: #8E44AD;
   }
 }
 
 .cart-title {
   text-align: center;
+  display: flex;
+  width: fit-content;
+  margin: auto;
   h2 {
     color: white !important;
     font-family: 'Press Start 2P', cursive;
+    margin-top: 5px;
   }
 }
+
+.cart-items-container {
+  width: 55%;
+  height: 400px;
+  margin: auto;
+  border: solid white;
+  margin-top: 50px;
+  color: white;
+};
 
 .browse-items {
   margin-top: 30px;
@@ -35,4 +53,15 @@
   color: white;
   font-family: 'Merchant Copy', truetype;
   font-size: 25px;
+}
+
+.line-items-flexbox {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.line-item-container{
+  display: flex;
+  justify-content: space-around;
 }

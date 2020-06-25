@@ -5,6 +5,7 @@
   width: 400px;
   background-color: transparent;
   margin: auto;
+  margin-top: 40px;
   // position: fixed;
   // left: 640px;
   // top: 215px;
@@ -20,8 +21,8 @@
 .merch-card-image {
   width: 200px;
   height: 150px;
-  border: dashed #F1FF4E;
-  border-width: 2px;
+  // border: dashed #F1FF4E;
+  // border-width: 2px;
   margin-bottom: 40px;
   margin: auto;
 }
@@ -35,7 +36,7 @@
 
 .hoodie-example {
   object-fit: cover;
-  width: 100px;
-  height: 100px;
-  justify-content: center;
+  width: 130px;
+  height: 130px;
+  margin: auto;
  }

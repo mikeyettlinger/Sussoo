@@ -1,10 +1,53 @@
-
-<h1> Susso </h1>
-<% @songs.each do |song| %>
-<%= song.title %>
-<button id="<%=song.title%>" type="button">Click Me!</button>
-<% end %>
-
-<div class="tv-giv-container">
-  <p>hi</p>
+<div class="background-container">
+  <div class="beats-container">
+    <p>BEATS</p>
+  </div>
+  <div class="spotify">
+    <iframe src="https://open.spotify.com/embed/artist/2B9ZzzgW0gj69OqxAl4XYt" width="500" height="280" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  </div>
 </div>
+
+<div class="cart-icon-container">
+  <%= link_to carts_path(@cart) do %>
+  <i class="fa fa-shopping-cart fa-3x shopping-cart-icon-button"></i>
+  <% end %>
+</div>
+
+<div class="left-menu-container">
+  <li><%= link_to "MERCH", root_path %></li>
+  <li><%= link_to "ARCADE", "/" %></li>
+  <li><%= link_to "CLUB", "/" %></li>
+  <li><%= link_to "BEATS", songs_path %></li>
+
+  <div class="banner-social-links">
+    <a href="https://www.instagram.com/sussoobeats/"><i class="social-icon fab fa-instagram fa-2x"></i></a>
+    <a href="https://www.facebook.com/oosussoo/"><i class="social-icon fab fa-facebook fa-2x"></i></a>
+    <a href="#"><i class="social-icon fab fa-youtube fa-2x"></i></a>
+    <a href="#"><i class="social-icon fab fa-discord fa-2x"></i></i></a>
+    <a href="https://open.spotify.com/artist/2B9ZzzgW0gj69OqxAl4XYt?si=JOV2bBBiRAONHUJhA0oykg"><i class="social-icon fab fa-spotify fa-2x"></i></i></a>
+    <a href="https://soundcloud.com/sussoo-178309003"><i class="social-icon fab fa-soundcloud fa-2x"></i></i></a>
+  </div>
+</div>
+
+<div class="bottom-right-container">
+  <div class="icons-container">
+    <%= image_tag "sussoo_icon_blue.png", id: 'bottom-right-logo-blue'%>
+    <%= image_tag "sussoo_icon_pink.png", id: 'bottom-right-logo-pink'%>
+  </div>
+  <div class="logo-container">
+    <div class="container">
+      <div class="glitch" data-text="SussoO">SussoO</div>
+      <div class="glow">SussoO</div>
+    </div>
+    <div class="scanlines"></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
