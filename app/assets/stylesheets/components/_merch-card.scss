@@ -1,3 +1,6 @@
+.holder {
+  position: relative;
+}
 
 .merch-card {
   // border: dashed #F1FF4E;
@@ -9,6 +12,13 @@
   // position: fixed;
   // left: 640px;
   // top: 215px;
+}
+
+.merch-card-counter {
+  color: white;
+  position: absolute;
+   top: 4px;
+   left: 140px;
 }
 
 .merch-item-card {
@@ -27,11 +37,9 @@
   margin: auto;
 }
 
-.merch-card-title h3 {
-  font-family: 'Merchant Copy', truetype !important;
-  color: white !important;
-  font-size: 22px !important;
+.merch-card-title span {
   text-align: center;
+  margin-left: 135px;
 }
 
 .hoodie-example {
@@ -40,3 +48,20 @@
   height: 130px;
   margin: auto;
  }
+
+.prev-arrow {
+  color: white;
+  position: absolute;
+  bottom: 4px;
+  left: 140px;
+  font-size: 18px;
+
+}
+
+.next-arrow {
+  color: white;
+  position: absolute;
+   bottom: 4px;
+   right: 140px;
+   font-size: 18px;
+}

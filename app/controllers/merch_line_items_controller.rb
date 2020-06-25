@@ -58,10 +58,15 @@ class MerchLineItemsController < ApplicationController
   # DELETE /merch_line_items/1.json
   def destroy
     @cart = Cart.find(session[:cart_id])
-    @merch_line_item.destroy
+    if @merch_line_item.quantity > 1
+      @merch_line_item.quantity - 1
+    else
+      @merch_line_item.destroy
+    end
     respond_to do |format|
-      format.html { redirect_to merch_line_items_url, notice: 'Merch line item was successfully destroyed.' }
+      format.html { redirect_to @cart, notice: 'Merch line item was successfully destroyed.' }
       format.json { head :no_content }
+      format.js { render js: 'window.top.location.reload(true);' }
     end
   end
 

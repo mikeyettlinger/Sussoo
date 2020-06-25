@@ -33,6 +33,20 @@
 
 <div class="cart-items-container">
   <div class="line-items-flexbox">
+    <div class="title-item-container">
+      <div class="item-title">
+        <ul> ITEM </ul>
+      </div>
+      <div class="size-title">
+        <ul> SIZE </ul>
+      </div>
+       <div class="qty-title">
+        <ul> QTY </ul>
+      </div>
+      <div class="price-title">
+        <ul> PRICE </ul>
+      </div>
+    </div>
  <% @cart.merch_line_items.each do |item| %>
     <div class="line-item-container">
       <div class="">
@@ -41,8 +55,14 @@
       <div class="">
         <ul><%= item.merch.size %></ul>
       </div>
+       <div class="">
+        <ul><%= item.quantity %></ul>
+      </div>
       <div class="">
-        <ul><%= item.merch.price %></ul>
+        <ul><%= "$#{item.merch.price}" %></ul>
+      </div>
+      <div class="">
+        <ul><%= link_to "Remove", item, method: :delete, data: { confirm: "Are you sure?" } %></ul>
       </div>
     </div>
   <% end %>

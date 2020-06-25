@@ -1,30 +1,40 @@
 .add-to-basket-button p {
   font-family: 'Merchant Copy', truetype;
-  color: #817949;
+  color: #F7D51D;
   text-align: center;
   font-size: 18px;
+    text-decoration: none;
+
 }
 
 .add-to-basket-button {
   border: solid;
   border-radius: 2px;
-  border-color: #817949;
+  border-color: #F7D51D;
   width: 180px;
   height: 30px;
   border-width: 2px;
   align-content: center;
   margin: auto;
+  margin-top: 30px;
+  text-decoration: none;
+
 }
 
 .add-to-basket-button:hover {
-  background-color: #817949;
+  background-color: #F7D51D;
   background-opacity: 40%;
-  border-color: #817949;
+  border-color: #F7D51D;
   transition: background .1s linear;
+    text-decoration: none;
+
 }
 
 .add-to-basket-button:hover p {
-  color: white !important;
+  color: black !important;
+  text-decoration: none !important;
+    text-decoration: none;
+
 }
 
 

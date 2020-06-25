@@ -4,9 +4,9 @@ class CartsController < ApplicationController
 
   # GET /carts
   # GET /carts.json
-  def index
-    @carts = Cart.all
-  end
+  # def index
+  #   @carts = Cart.all
+  # end
 
   # GET /carts/1
   # GET /carts/1.json
