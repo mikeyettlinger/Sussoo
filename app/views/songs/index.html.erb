@@ -1,16 +1,19 @@
 <div class="background-container">
-  <div class="beats-container">
-    <p>BEATS</p>
-  </div>
-  <div class="spotify">
-    <iframe src="https://open.spotify.com/embed/artist/2B9ZzzgW0gj69OqxAl4XYt" width="500" height="280" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  <div class="beats-flexbox">
+    <div class="spotify">
+      <iframe src="https://open.spotify.com/embed/artist/2B9ZzzgW0gj69OqxAl4XYt" width="250" height="280" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+    <div class="beats-container">
+      <ul>LISTEN ON</ul>
+      <ul><a href="">SOUNDCLOUD</a></ul>
+      <ul><a href="">BEATSTARS</a></ul>
+      <p class="nes-text is-disabled out-now"> FEELINGS OUT NOW 💎 </p>
+    </div>
   </div>
 </div>
 
 <div class="cart-icon-container">
-  <%= link_to carts_path(@cart) do %>
-  <i class="fa fa-shopping-cart fa-3x shopping-cart-icon-button"></i>
-  <% end %>
+  <%= link_to image_tag("cart.png"), cart_path(@cart), class: "shopping-cart-icon-button" %>
 </div>
 
 <div class="left-menu-container">
@@ -19,14 +22,7 @@
   <li><%= link_to "CLUB", "/" %></li>
   <li><%= link_to "BEATS", songs_path %></li>
 
-  <div class="banner-social-links">
-    <a href="https://www.instagram.com/sussoobeats/"><i class="social-icon fab fa-instagram fa-2x"></i></a>
-    <a href="https://www.facebook.com/oosussoo/"><i class="social-icon fab fa-facebook fa-2x"></i></a>
-    <a href="#"><i class="social-icon fab fa-youtube fa-2x"></i></a>
-    <a href="#"><i class="social-icon fab fa-discord fa-2x"></i></i></a>
-    <a href="https://open.spotify.com/artist/2B9ZzzgW0gj69OqxAl4XYt?si=JOV2bBBiRAONHUJhA0oykg"><i class="social-icon fab fa-spotify fa-2x"></i></i></a>
-    <a href="https://soundcloud.com/sussoo-178309003"><i class="social-icon fab fa-soundcloud fa-2x"></i></i></a>
-  </div>
+
 </div>
 
 <div class="bottom-right-container">
@@ -40,6 +36,15 @@
       <div class="glow">SussoO</div>
     </div>
     <div class="scanlines"></div>
+  </div>
+  <div class="banner-social-links">
+    <a href="https://www.instagram.com/sussoobeats/"><i class="social-icon fab fa-instagram fa-2x"></i></a>
+    <a href="https://www.facebook.com/oosussoo/"><i class="social-icon fab fa-facebook fa-2x"></i></a>
+    <a href="#"><i class="social-icon fab fa-youtube fa-2x"></i></a>
+    <a href="#"><i class="social-icon fab fa-discord fa-2x"></i></i></a>
+    <a href="https://open.spotify.com/artist/2B9ZzzgW0gj69OqxAl4XYt?si=JOV2bBBiRAONHUJhA0oykg"><i class="social-icon fab fa-spotify fa-2x"></i></i></a>
+    <a href="https://soundcloud.com/sussoo-178309003"><i class="social-icon fab fa-soundcloud fa-2x"></i></i></a>
+    <%= link_to image_tag("beatstars.png"), "https://www.beatstars.com/sussoo/feed", class: "beatstars" %>
   </div>
 </div>
 
