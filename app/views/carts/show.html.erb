@@ -8,7 +8,7 @@
   <% counter += 1 %>
 <% end %>
 <% @cart.merch_line_items.each do |merch| %>
-  <% counter += 1 %>
+  <% counter += ( 1 * merch.quantity )%>
 <% end %>
 <% if counter == 0 %>
   <div id="cart-title" class="cart-title">
@@ -55,8 +55,15 @@
       <div class="">
         <ul><%= item.merch.size %></ul>
       </div>
-       <div class="">
-        <ul><%= item.quantity %></ul>
+       <div class="edit-qty-form">
+        <ul>
+          <%= simple_form_for(item) do |f| %>
+                <div class="flexbox-form">
+                  <%= f.input :quantity, selected: "#{item.quantity}", label: false  %>
+                  <%= f.submit '✅', class: "submit-btn"  %>
+                </div>
+          <% end %>
+        </ul>
       </div>
       <div class="">
         <ul><%= "$#{item.merch.price}" %></ul>
@@ -68,6 +75,8 @@
   <% end %>
   </div>
 </div>
+
+
 
   <% price_counter = 12 %>
   <% @cart.merch_line_items.each do |item| %>

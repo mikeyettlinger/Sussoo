@@ -5,8 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Song.destroy_all
-Merch.destroy_all
+# Song.destroy_all
+# Merch.destroy_all
+
+User.destroy_all
+
+admin = User.create(
+  email: "admin@gmail.com",
+  password: "123456",
+  admin: true)
+admin.save!
+
+puts "admin created"
 
 counter = 1
 

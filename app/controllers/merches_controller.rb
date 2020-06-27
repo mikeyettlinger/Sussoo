@@ -15,6 +15,7 @@ class MerchesController < ApplicationController
   # GET /merches/new
   def new
     @merch = Merch.new
+    authorize @merch
   end
 
   # GET /merches/1/edit
@@ -25,6 +26,7 @@ class MerchesController < ApplicationController
   # POST /merches.json
   def create
     @merch = Merch.new(merch_params)
+    authorize @merch
 
     respond_to do |format|
       if @merch.save
@@ -65,6 +67,7 @@ class MerchesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_merch
       @merch = Merch.find(params[:id])
+      authorize @merch
     end
 
     # Only allow a list of trusted parameters through.
