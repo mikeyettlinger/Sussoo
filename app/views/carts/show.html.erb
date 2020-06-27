@@ -56,7 +56,7 @@
         <ul><%= item.merch.size %></ul>
       </div>
        <div class="">
-        <ul><%= item.quantity %></ul>
+        <ul><%= link_to item.quantity, edit_merch_line_item_path(item), type: "button", class: "nes-btn is-primary", onclick: "document.getElementById('dialog-dark-rounded').showModal();" %></ul>
       </div>
       <div class="">
         <ul><%= "$#{item.merch.price}" %></ul>
@@ -68,6 +68,20 @@
   <% end %>
   </div>
 </div>
+
+<!-- Dark and Rounded dialog -->
+<section>
+  <dialog class="nes-dialog is-dark is-rounded" id="dialog-dark-rounded">
+    <form method="dialog">
+      <p class="title">Dark and Rounded dialog</p>
+      <p>Alert: this is a dialog.</p>
+      <menu class="dialog-menu">
+        <button class="nes-btn">Cancel</button>
+        <button class="nes-btn is-primary">Confirm</button>
+      </menu>
+    </form>
+  </dialog>
+</section>
 
   <% price_counter = 12 %>
   <% @cart.merch_line_items.each do |item| %>
