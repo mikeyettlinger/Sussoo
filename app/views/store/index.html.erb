@@ -1,5 +1,8 @@
 <div class="background-container">
   <div class="single-item">
+    <% if @merches.empty? %>
+      <p>COMING SOON</p>
+    <% else %>
     <% @merches.each_with_index do |merch, index| %>
     <div class="holder">
       <div class="merch-card">
@@ -38,8 +41,32 @@
       <section>
         <dialog class="nes-dialog is-dark is-rounded" id="dialog-dark-rounded-<%=merch.id%>">
           <form method="dialog">
-            <p class="title"><%= "#{merch.title}" %></p>
-            <p>Alert: this is a dialog.</p>
+            <p class="title merch-popup-title"><%= "#{merch.title}" %></p>
+            <%= cl_image_tag merch.photos[0].key, class: "hoodie-example" %>
+            <p class="merch-popup-description"><%= "#{merch.description}" %></p>
+
+            <div style="background-color:#212529; padding: 1rem 0;">
+              <label>
+                <input type="radio" class="nes-radio is-dark" name="answer-dark" checked />
+                <span>S</span>
+              </label>
+
+              <label>
+                <input type="radio" class="nes-radio is-dark" name="answer-dark" />
+                <span>M</span>
+              </label>
+
+              <label>
+                <input type="radio" class="nes-radio is-dark" name="answer-dark" />
+                <span>L</span>
+              </label>
+
+              <label>
+                <input type="radio" class="nes-radio is-dark" name="answer-dark" />
+                <span>XL</span>
+              </label>
+            </div>
+
             <menu class="dialog-menu">
               <button class="nes-btn">Cancel</button>
               <button class="nes-btn is-primary">Confirm</button>
@@ -50,6 +77,7 @@
     </div>
    <% end %>
   </div>
+  <% end %>
   <div class="store-container">
     <p>STORE</p>
   </div>

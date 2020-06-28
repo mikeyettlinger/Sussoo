@@ -94,16 +94,17 @@
       <label class="amount">
         <% total_price = 0 %>
         <% @cart.merch_line_items.each do |item| %>
-        <% total_price += item.merch.price %>
+        <% total_price += (item.merch.price * item.quantity) %>
         <% end %>
         <span> Total: $<%= total_price %> </span>
       </label>
     </article>
 
     <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-key="<%= Rails.configuration.stripe['pk_test_xF61NzZKqAY359NF0YuBtp59000aPPR7ZH'] %>"
             data-description="Please enter your details below"
             data-label="Proceed to checkout"
+            data-amount="<%= total_price %>"
             data-locale="auto"></script>
   <% end %>
 </div>
