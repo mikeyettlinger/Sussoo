@@ -1,6 +1,8 @@
 class StoreController < ApplicationController
   def index
-    @songs = Song.all
-    @merches = Merch.all
+    @songs = policy_scope(Song)
+    @merches = policy_scope(Merch)
+    authorize @songs
+    authorize @merches
   end
 end

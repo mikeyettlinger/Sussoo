@@ -45,7 +45,7 @@ class MerchLineItemsController < ApplicationController
   def update
     respond_to do |format|
       if @merch_line_item.update(merch_line_item_params)
-        format.html { redirect_to @merch_line_item, notice: 'Merch line item was successfully updated.' }
+        format.html { redirect_to  @merch_line_item.cart, notice: 'Merch line item was successfully updated.' }
         format.json { render :show, status: :ok, location: @merch_line_item }
       else
         format.html { render :edit }
@@ -58,13 +58,9 @@ class MerchLineItemsController < ApplicationController
   # DELETE /merch_line_items/1.json
   def destroy
     @cart = Cart.find(session[:cart_id])
-    if @merch_line_item.quantity > 1
-      @merch_line_item.quantity = @merch_line_item.quantity - 1
-    else
-      @merch_line_item.destroy
-    end
+    @merch_line_item.destroy
     respond_to do |format|
-      format.html { redirect_to @cart, notice: 'Merch line item was successfully destroyed.' }
+      format.html { redirect_to @merch_line_item.cart, notice: 'Merch line item was successfully destroyed.' }
       format.json { head :no_content }
       format.js { render js: 'window.top.location.reload(true);' }
     end
@@ -74,10 +70,11 @@ class MerchLineItemsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_merch_line_item
       @merch_line_item = MerchLineItem.find(params[:id])
+      authorize @merch_line_item
     end
 
     # Only allow a list of trusted parameters through.
     def merch_line_item_params
-      params.require(:merch_line_item).permit(:merch_id, :cart_id)
+      params.require(:merch_line_item).permit(:merch_id, :cart_id, :quantity)
     end
 end
