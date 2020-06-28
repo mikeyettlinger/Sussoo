@@ -9,11 +9,17 @@
           </span>
         </div>
         <div class="merch-card-image">
-          <%= image_tag "sussoo_supreme.png", class: "hoodie-example" %>
+          <% if merch.photos.attached? %>
+            <%= cl_image_tag merch.photos[0].key, class: "hoodie-example" %>
+          <% else %>
+            <%= image_tag "sussoo_supreme.png", class: "hoodie-example" %>
+          <% end %>
         </div>
         <div class="merch-card-title">
           <span class="nes-text is-warning" style="font-size: 14px">
-            <%= "#{merch.title} $#{merch.price}" %>
+            <a class="nes-text is-warning" onclick="document.getElementById('dialog-dark-rounded-<%=merch.id%>').showModal();">
+              <%= "#{merch.title} $#{merch.price}" %>
+            </a>
           </span>
           <div class="add-to-basket-button">
             <%= link_to merch_line_items_path(merch_id: merch), method: :post, style:"text-decoration: none;" do %>
@@ -28,13 +34,27 @@
       <div class="prev-arrow">
         <span class="nes-text is-disabled"> < </span>
       </div>
+      <!-- Dark and Rounded dialog -->
+      <section>
+        <dialog class="nes-dialog is-dark is-rounded" id="dialog-dark-rounded-<%=merch.id%>">
+          <form method="dialog">
+            <p class="title"><%= "#{merch.title}" %></p>
+            <p>Alert: this is a dialog.</p>
+            <menu class="dialog-menu">
+              <button class="nes-btn">Cancel</button>
+              <button class="nes-btn is-primary">Confirm</button>
+            </menu>
+          </form>
+        </dialog>
+      </section>
     </div>
-    <% end %>
+   <% end %>
   </div>
   <div class="store-container">
     <p>STORE</p>
   </div>
 </div>
+
 
 <div class="cart-icon-container">
   <%= link_to image_tag("cart.png"), cart_path(@cart), class: "shopping-cart-icon-button" %>
@@ -43,17 +63,16 @@
 
 <div class="left-menu-container">
   <% if user_signed_in?  %>
-  <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+  <li><%= link_to "LOG OUT", destroy_user_session_path, method: :delete %></li>
   <% else %>
-  <li><%= link_to "Log in", new_user_session_path %></li>
+  <li><%= link_to "LOG IN", new_user_session_path %></li>
   <li><%= link_to "Sign Up", new_user_registration_path %></li>
   <% end %>
-  <li><%= link_to "MERCH", "/" %></li>
-  <li><%= link_to "ARCADE", "/" %></li>
+  <li><%= link_to "MERCH 🔥", "/" %></li>
   <li type="button" class="club" onclick="document.getElementById('dialog-dark-rounded').showModal();">
     CLUB
   </li>
-  <li><%= link_to "MUSIC", songs_path %></li>
+  <li><%= link_to "MUSIC 🎧", songs_path %></li>
   <div class="banner-social-links">
     <a href="https://www.instagram.com/sussoobeats/"><i class="social-icon fab fa-instagram fa-2x"></i></a>
     <a href="https://www.facebook.com/oosussoo/"><i class="social-icon fab fa-facebook fa-2x"></i></a>

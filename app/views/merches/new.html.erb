@@ -1,5 +1,13 @@
 <h1>New Merch</h1>
 
-<%= render 'form', merch: @merch %>
+ <%= simple_form_for(@merch) do |f| %>
+        <%= f.input :title %>
+        <%= f.input :category %>
+        <%= f.input :price %>
+        <%= f.input :quantity %>
+        <%= f.input :size, collection: ["S", "M", "L", "XL"]%>
+        <%= f.input :description %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <%= f.submit "New Merch" %>
+  <% end %>
 
-<%= link_to 'Back', merches_path %>
