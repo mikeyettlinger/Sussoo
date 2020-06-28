@@ -28,6 +28,7 @@ class MerchLineItemsController < ApplicationController
   def create
     merch = Merch.find(params[:merch_id])
     @merch_line_item = @cart.add_merch(merch)
+    authorize @merch_line_item
 
     respond_to do |format|
       if @merch_line_item.save

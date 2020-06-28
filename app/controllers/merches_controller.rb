@@ -4,7 +4,7 @@ class MerchesController < ApplicationController
   # GET /merches
   # GET /merches.json
   def index
-    @merches = Merch.all
+    @merches = policy_scope(Merch)
   end
 
   # GET /merches/1

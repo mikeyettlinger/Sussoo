@@ -5,30 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-# Song.destroy_all
-# Merch.destroy_all
+MerchLineItem.destroy_all
+Song.destroy_all
+Merch.destroy_all
 
-User.destroy_all
 
-admin = User.create(
-  email: "admin@gmail.com",
-  password: "123456",
-  admin: true)
-admin.save!
+pics = ["https://images.unsplash.com/photo-1578768079052-aa76e52ff62e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3334&q=80", "https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80", "https://images.unsplash.com/photo-1585431414144-7e4dd9343fb1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80", "https://images.unsplash.com/photo-1542406775-ade58c52d2e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjU2MDh9&auto=format&fit=crop&w=934&q=80"]
 
-puts "admin created"
-
-counter = 1
-
-10.times do
-  counter += 1
-  song = Song.create(
-    title: "Song#{counter}",
-    price: 2,
-    length: 1.5,
-    description: "lit")
-  song.save!
-end
+counter = 0
 
 10.times do
   counter += 1
@@ -38,6 +22,11 @@ end
     description: "lit",
     size: "Large",
     quantity: 10)
+    photo = URI.open(pics.sample)
+    merch.photos.attach(io: photo, filename: "#{merch.title}.jpg", content_type: "image/jpg")
   merch.save!
 end
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+
+puts "admin created"
+
+# AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
