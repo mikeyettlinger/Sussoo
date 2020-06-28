@@ -15,7 +15,7 @@ class ApplicationPolicy
   end
 
   def create?
-    if @user.admin = true
+    if @user.email.include? "admin"
       return true
     else
       false
@@ -23,7 +23,7 @@ class ApplicationPolicy
   end
 
   def new?
-    if @user.admin = true
+    if @user.email.include? "admin"
       return true
     else
       false
@@ -31,7 +31,7 @@ class ApplicationPolicy
   end
 
   def update?
-    if @user.admin = true
+    if @user.email.include? "admin"
       return true
     else
       false
@@ -39,7 +39,7 @@ class ApplicationPolicy
   end
 
   def edit?
-    if @user.admin = true
+    if @user.email.include? "admin"
       return true
     else
       false
@@ -47,7 +47,7 @@ class ApplicationPolicy
   end
 
   def destroy?
-    if @user.admin = true
+    if @user.email.include? "admin"
       return true
     else
       false

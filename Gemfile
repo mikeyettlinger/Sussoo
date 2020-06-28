@@ -37,6 +37,8 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'pundit'
+gem 'activeadmin'
+
 
 
 group :development, :test do
