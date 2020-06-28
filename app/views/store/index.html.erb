@@ -38,20 +38,39 @@
       <section>
         <dialog class="nes-dialog is-dark is-rounded" id="dialog-dark-rounded-<%=merch.id%>">
           <form method="dialog">
-            <p class="title"><%= "#{merch.title}" %></p>
-            <p>Alert: this is a dialog.</p>
+           <p class="title merch-popup-title"><%= "#{merch.title}" %></p>
+           <%= cl_image_tag merch.photos[0].key, class: "modal-pic" %>
+           <p class="merch-popup-description"><%= "#{merch.description}" %></p>
+           <div class="modal-price">
+            <%= "$#{merch.price}" %>
+          </div>
+           <div style="background-color:#212529; padding: 1rem 0;">
+             <label>
+               <input type="radio" class="nes-radio is-dark" name="answer-dark" checked />
+               <span>S</span>
+             </label>
+             <label>
+               <input type="radio" class="nes-radio is-dark" name="answer-dark" />
+               <span>M</span>
+             </label>
+             <label>
+               <input type="radio" class="nes-radio is-dark" name="answer-dark" />
+               <span>L</span>
+             </label>
+             <label>
+               <input type="radio" class="nes-radio is-dark" name="answer-dark" />
+               <span>XL</span>
+             </label>
+           </div>
             <menu class="dialog-menu">
               <button class="nes-btn">Cancel</button>
-              <button class="nes-btn is-primary">Confirm</button>
+              <button class="nes-btn is-warning">Confirm</button>
             </menu>
           </form>
         </dialog>
       </section>
     </div>
    <% end %>
-  </div>
-  <div class="store-container">
-    <p>STORE</p>
   </div>
 </div>
 
@@ -62,25 +81,30 @@
 
 
 <div class="left-menu-container">
+  <div class="store-container">
+    <p>STORE</p>
+  </div>
   <% if user_signed_in?  %>
   <li><%= link_to "LOG OUT", destroy_user_session_path, method: :delete %></li>
   <% else %>
   <li><%= link_to "LOG IN", new_user_session_path %></li>
   <li><%= link_to "Sign Up", new_user_registration_path %></li>
   <% end %>
-  <li><%= link_to "MERCH 🔥", "/" %></li>
+  <li><%= link_to "MERCH", "/" %></li>
   <li type="button" class="club" onclick="document.getElementById('dialog-dark-rounded').showModal();">
     CLUB
   </li>
-  <li><%= link_to "MUSIC 🎧", songs_path %></li>
-  <div class="banner-social-links">
+  <li><%= link_to "MUSIC", songs_path %></li>
+</div>
+
+<div class="banner-social-links">
     <a href="https://www.instagram.com/sussoobeats/"><i class="social-icon fab fa-instagram fa-2x"></i></a>
     <a href="https://www.facebook.com/oosussoo/"><i class="social-icon fab fa-facebook fa-2x"></i></a>
     <a href="#"><i class="social-icon fab fa-youtube fa-2x"></i></a>
     <a href="#"><i class="social-icon fab fa-discord fa-2x"></i></i></a>
     <a href="https://open.spotify.com/artist/2B9ZzzgW0gj69OqxAl4XYt?si=JOV2bBBiRAONHUJhA0oykg"><i class="social-icon fab fa-spotify fa-2x"></i></a>
     <a href="https://soundcloud.com/sussoo-178309003"><i class="social-icon fab fa-soundcloud fa-2x"></i></a>
-  </div>
+    <%= link_to image_tag("beatstars.png"), "https://www.beatstars.com/sussoo/feed", class: "beatstars" %>
 </div>
 
 <!-- Dark and Rounded dialog -->
@@ -88,10 +112,10 @@
   <dialog class="nes-dialog is-dark is-rounded" id="dialog-dark-rounded">
     <form method="dialog">
       <p class="title">Sign Up for Sussoo Notifications</p>
-      <p>Alert: this is a dialog.</p>
+      <p>DISCORD LINK HERE.</p>
       <menu class="dialog-menu">
         <button class="nes-btn">Cancel</button>
-        <button class="nes-btn is-primary">Confirm</button>
+        <button class="nes-btn is-warning">Confirm</button>
       </menu>
     </form>
   </dialog>

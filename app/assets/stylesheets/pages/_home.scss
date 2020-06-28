@@ -131,7 +131,7 @@ body {
   background-image: url('computer_background.png');
   background-size: cover;
   height: 750px;
-  width: 750px;
+  width: 850px;
   margin: auto;
   margin-top: 50px;
 }
@@ -158,10 +158,9 @@ body {
 
 .store-container {
   font-family: 'Press Start 2P', cursive;
-  font-size: 28px;
+  font-size: 34px;
   color: #F7D51D !important;
-  margin-top: 200px;
-  margin-left: 340px;
+  margin-bottom: 365px;
 }
 
 .slick-prev {
@@ -187,3 +186,6 @@ body {
   height: 33px;
 }
 
+#music {
+  color: #8E769D !important;
+}
