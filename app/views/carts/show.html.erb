@@ -12,7 +12,7 @@
 <% end %>
 <% if counter == 0 %>
   <div id="cart-title" class="cart-title">
-    <h2> Your Cart is Empty </h2>
+    <h2> 👀 Your Cart is Empty  👀</h2>
   </div>
   <div class="browse-items">
     <p><%= link_to 'Click here to browse exclusive items', root_path %> </p></p>
@@ -47,6 +47,11 @@
         <ul> PRICE </ul>
       </div>
     </div>
+      <% if @cart.merch_line_items.empty? %>
+      <div class="waving-cat">
+        <i class="nes-octocat animate"></i>
+      </div>
+      <% else %>
  <% @cart.merch_line_items.each do |item| %>
     <div class="line-item-container">
       <div class="">
@@ -73,6 +78,7 @@
       </div>
     </div>
   <% end %>
+  <% end %>
   </div>
 </div>
 
@@ -94,7 +100,7 @@
       <label class="amount">
         <% total_price = 0 %>
         <% @cart.merch_line_items.each do |item| %>
-        <% total_price += item.merch.price %>
+        <% total_price += (item.merch.price * item.quantity) %>
         <% end %>
         <span> Total: $<%= total_price %> </span>
       </label>
