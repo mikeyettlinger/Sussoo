@@ -1,10 +1,15 @@
 class ChargesController < ApplicationController
+  # before_action :authorize
+  skip_after_action :verify_authorized, only: [:create]
+
+
   def new
   end
 
   def create
   # Amount in cents
     @amount = 500
+    # authorize @amount
 
     customer = Stripe::Customer.create({
       email: params[:stripeEmail],
@@ -22,4 +27,11 @@ class ChargesController < ApplicationController
     flash[:error] = e.message
     redirect_to new_charge_path
   end
+
+  private
+
+  # def authorize
+  #   authorize @charges
+  # end
+
 end
