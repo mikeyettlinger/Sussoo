@@ -7,43 +7,11 @@ $tabs-base-color: #8e44ad;
 @font-face {font-family: "Merchant Copy"; src: url("//db.onlinewebfonts.com/t/4145587a822071d1d66f5201f5233f42.eot"); src: url("//db.onlinewebfonts.com/t/4145587a822071d1d66f5201f5233f42.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/4145587a822071d1d66f5201f5233f42.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/4145587a822071d1d66f5201f5233f42.woff") format("woff"), url("//db.onlinewebfonts.com/t/4145587a822071d1d66f5201f5233f42.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/4145587a822071d1d66f5201f5233f42.svg#Merchant Copy") format("svg"); }
 
 body {
-    // background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/141552/header-home-fallback.jpg');
-    // background-size: cover;
-    // max-height: 100vh;
-    // padding: 0;
-    // margin: 0;
     width:100vw;
     height: 100vh;
     margin: 0;
-    overflow: hidden;
     background-color: black !important;
-}
-
-// @media (min-aspect-ratio: 16/9) {
-//     .home_video {
-//         width:100%;
-//         height: auto;
-//     }
-// }
-// @media (max-aspect-ratio: 16/9) {
-//     #videoBG {
-//         width:auto;
-//         height: 100%;
-//     }
-// }
-// @media (max-width: 767px) {
-//     #videoBG {
-//         display: none;
-//     }
-//   }
-
-// .wrapper-page {
-//     margin-top: 100vh;
-// }
-
-
-#page-structure{
-  height: 100vh;
+    overflow: hidden;
 }
 
 .header-text {
@@ -55,10 +23,10 @@ body {
 
 .home_video {
   z-index: -5;
-  position: relative;
+  // position: relative;
   width: 100%;
   height: 100vh;
-  display: flex;
+  // display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -122,9 +90,9 @@ body {
 }
 
 .logo-container {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 40px;
-    color: white;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 40px;
+  color: white;
 }
 
 .background-container {

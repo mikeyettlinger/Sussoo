@@ -1,1 +1,40 @@
-<h2>Thanks, your payment of <strong>$5.00</strong> has been processed. Your shipment will be on it's way soon!</h2>
+<div id="cart-title" class="cart-title">
+    <i class="nes-icon coin is-medium"></i>
+    <h2>Thank you! Your order has been confirmed.</h2>
+    <i class="nes-icon coin is-medium"></i>
+  </div>
+
+<div class="edit-cart">
+  <p style="font-family: 'Press Start 2P', cursive;">
+  <%= link_to 'Back', root_path %> </p>
+</div>
+
+
+<div class="cart-items-container">
+  <div class="line-items-flexbox">
+      <% if @cart.merch_line_items.empty? %>
+      <div class="waving-cat">
+        <i class="nes-octocat animate"></i>
+      </div>
+      <% else %>
+ <% @cart.merch_line_items.each do |item| %>
+    <div class="line-item-container">
+      <div class="">
+        <ul><%= "✅ #{item.merch.title}" %></ul>
+      </div>
+      <div class="">
+        <ul><%= item.merch.size %></ul>
+      </div>
+       <div class="">
+        <ul><%= item.merch.quantity %></ul>
+      </div>
+      <div class="">
+        <ul><%= "$#{item.merch.price}" %></ul>
+      </div>
+    </div>
+  <% end %>
+  <% end %>
+  </div>
+</div>
+
+

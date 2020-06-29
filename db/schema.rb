@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_28_105520) do
+ActiveRecord::Schema.define(version: 2020_06_29_161658) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,6 +76,12 @@ ActiveRecord::Schema.define(version: 2020_06_28_105520) do
     t.index ["song_id"], name: "index_line_items_on_song_id"
   end
 
+  create_table "merch_groups", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "merch_line_items", force: :cascade do |t|
     t.bigint "merch_id", null: false
     t.bigint "cart_id", null: false
@@ -95,6 +101,8 @@ ActiveRecord::Schema.define(version: 2020_06_28_105520) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "merch_group_id"
+    t.index ["merch_group_id"], name: "index_merches_on_merch_group_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -150,11 +158,17 @@ ActiveRecord::Schema.define(version: 2020_06_28_105520) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "variants", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "line_items", "carts"
   add_foreign_key "line_items", "songs"
   add_foreign_key "merch_line_items", "carts"
   add_foreign_key "merch_line_items", "merches"
+  add_foreign_key "merches", "merch_groups"
   add_foreign_key "orders", "song_shopping_carts"
   add_foreign_key "orders", "users"
   add_foreign_key "shopping_carts", "users"
