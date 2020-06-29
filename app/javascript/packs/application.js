@@ -29,6 +29,8 @@ import 'slick-carousel';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { initSlick } from '../plugins/init_slick';
+import { initStripe } from '../plugins/init_stripe';
+
 
 
 
@@ -38,6 +40,7 @@ import { initSlick } from '../plugins/init_slick';
 
 document.addEventListener('turbolinks:load', () => {
   initSlick();
+  initStripe();
   // Call your functions here, e.g:
   // initSelect2();
 });

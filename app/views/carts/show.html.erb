@@ -106,10 +106,11 @@
       </label>
     </article>
 
-    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-            data-description="Please enter your details below"
-            data-label="Proceed to checkout"
-            data-locale="auto"></script>
-  <% end %>
+    <script src="https://js.stripe.com/v3"></script>
+    <% raise %>
+    <button id="checkout-button">Pay</button>
+
+
+
 </div>
+    <% end %>

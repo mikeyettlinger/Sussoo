@@ -1,6 +1,6 @@
 class ChargesController < ApplicationController
   # before_action :authorize
-  skip_after_action :verify_authorized, only: [:create]
+  skip_after_action :verify_authorized, only: [:new, :create]
 
 
   def new
