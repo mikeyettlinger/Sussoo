@@ -2,7 +2,6 @@
 
 
 
-
 <% counter = 0 %>
 <% @cart.line_items.each do |item| %>
   <% counter += 1 %>
@@ -71,7 +70,7 @@
         </ul>
       </div>
       <div class="">
-        <ul><%= "$#{item.merch.price}" %></ul>
+        <ul><%= "$#{item.merch.price * item.quantity}" %></ul>
       </div>
       <div class="">
         <ul><%= link_to "Remove", item, method: :delete, data: { confirm: "Are you sure?" } %></ul>
