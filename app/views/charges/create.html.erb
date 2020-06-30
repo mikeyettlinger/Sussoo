@@ -26,10 +26,10 @@
         <ul><%= item.merch.size %></ul>
       </div>
        <div class="">
-        <ul><%= item.merch.quantity %></ul>
+        <ul><%= item.quantity %></ul>
       </div>
       <div class="">
-        <ul><%= "$#{item.merch.price}" %></ul>
+        <ul><%= "$#{item.merch.price * item.quantity}" %></ul>
       </div>
     </div>
   <% end %>
